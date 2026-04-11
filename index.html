@@ -50,7 +50,7 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 250px 1fr;
+      grid-template-columns: 270px 1fr;
       gap: 30px;
       padding: 28px;
       background: var(--panel);
@@ -69,9 +69,10 @@
     }
 
     .photo-wrap img {
-      width: 220px;
-      height: 220px;
+      width: 240px;
+      height: 280px;
       object-fit: cover;
+      object-position: center top;
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 14px 30px rgba(0,0,0,0.35);
@@ -88,6 +89,7 @@
       border-radius: 999px;
       color: var(--muted);
       font-size: 0.92rem;
+      line-height: 1.5;
     }
 
     .status-dot {
@@ -96,6 +98,24 @@
       border-radius: 50%;
       background: var(--success);
       box-shadow: 0 0 10px rgba(143, 211, 166, 0.8);
+      flex-shrink: 0;
+    }
+
+    .contact-under-photo {
+      width: 100%;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 0.95rem;
+    }
+
+    .contact-under-photo div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .hero-content {
@@ -368,12 +388,6 @@
       font-size: 0.93rem;
     }
 
-    .footer-note {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
@@ -405,6 +419,10 @@
       .grid-2 {
         grid-template-columns: 1fr;
       }
+
+      .contact-under-photo {
+        text-align: left;
+      }
     }
 
     @media (max-width: 640px) {
@@ -422,8 +440,8 @@
       }
 
       .photo-wrap img {
-        width: 180px;
-        height: 180px;
+        width: 210px;
+        height: 255px;
       }
     }
   </style>
@@ -435,33 +453,40 @@
     <section class="hero">
       <div class="photo-wrap">
         <img src="profile.jpg" alt="Ferdinantos Kottas profile photo">
+
         <div class="status-badge">
           <span class="status-dot"></span>
-          Open to opportunities in finance, risk, quant research, and data science
+          Interested in AI and ML applications in finance, risk, and quantitative research
+        </div>
+
+        <div class="contact-under-photo">
+          <div><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</div>
+          <div><i class="fa-solid fa-phone"></i> +353831012005</div>
+          <div><i class="fa-solid fa-envelope"></i> ferdinantosk@math.uoa.gr</div>
         </div>
       </div>
 
       <div class="hero-content">
-        <div class="eyebrow">Quant Finance • Risk Analytics • Research</div>
+        <div class="eyebrow">Quant • Risk Scientist &amp; Analytics • Researcher</div>
+
         <h1>Ferdinantos Kottas, MSc, MPhil, PhD</h1>
+
         <p class="headline">
-          Quant &amp; Risk Data Scientist | AI, Machine Learning, Asset Pricing, Risk &amp; Portfolio Management
+          AI &amp; ML Expert in Finance | Quant &amp; Risk Data Scientist | Asset Pricing, Credit Risk &amp; Portfolio Management
         </p>
+
         <p class="bio-text">
-          Quantitative finance and risk data scientist with a PhD background in empirical finance, financial econometrics, and machine learning applications in financial markets.
-          My work combines asset pricing, portfolio construction, credit risk modeling, and AI-driven analytics, with experience spanning research, risk management, and financial data science.
-          I focus on building rigorous, practical solutions that connect advanced quantitative methods with real-world decision-making in finance.
+          AI and machine learning specialist in finance, risk analytics, and quantitative research, with a PhD background in empirical finance and financial econometrics.
+          My work spans portfolio management, asset pricing, credit risk modeling, fraud analytics, and AI-driven decision systems for financial applications.
+          I combine strong academic research with hands-on industry experience, building practical models and frameworks that support risk assessment, portfolio construction, and data-driven strategy across financial institutions and markets.
         </p>
 
         <div class="icon-links">
-          <a href="mailto:ferdinantosk@math.uoa.gr"><i class="fa-solid fa-envelope"></i> Email</a>
-          <a href="tel:+353831012005"><i class="fa-solid fa-phone"></i> +353831012005</a>
-          <span><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</span>
           <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
           <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           <a href="https://www.kaggle.com/ferdinantoskottas" target="_blank"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
           <a href="https://orcid.org/0009-0003-5879-3461" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
-          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
           <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
           <a href="https://www.fmc-cluster.org/people/researchteam/" target="_blank"><i class="fa-solid fa-building-columns"></i> FMC Research Fellow</a>
         </div>
@@ -486,26 +511,27 @@
         <div class="card">
           <h2>Professional Profile</h2>
           <p class="muted">
-            I work at the intersection of quantitative finance, machine learning, and risk analytics, with experience across credit risk modeling, portfolio management, empirical asset pricing, and econometric analysis.
-            My background combines academic research with applied financial data science, allowing me to design models and frameworks that are both methodologically rigorous and commercially relevant.
+            I specialize in AI and machine learning applications in finance, with experience across portfolio management, credit risk, fraud analytics, and quantitative research.
+            My academic background is rooted in empirical finance, financial econometrics, and security analysis, including the study of environmentally classified securities across different market segments.
           </p>
           <p class="muted">
-            My research and applied work cover green and traditional securities, factor models, reinforcement learning for portfolio construction, credit scorecard development, and analytics for financial decision-making.
+            Beyond my PhD research, I expanded my work toward AI and ML models for portfolio construction, risk management, and credit analytics, developing practical solutions that combine statistical rigor, predictive performance, and business relevance.
           </p>
         </div>
 
         <div class="card">
           <h2>Focus Areas</h2>
           <div class="pill-row">
+            <span class="pill">AI in Finance</span>
+            <span class="pill">Machine Learning</span>
+            <span class="pill">Credit Risk Modeling</span>
+            <span class="pill">Fraud Scorecards</span>
+            <span class="pill">Portfolio Management</span>
             <span class="pill">Asset Pricing</span>
-            <span class="pill">Credit Risk</span>
-            <span class="pill">Portfolio Optimization</span>
             <span class="pill">Financial Econometrics</span>
-            <span class="pill">Machine Learning in Finance</span>
-            <span class="pill">AI in Risk Modeling</span>
-            <span class="pill">Reinforcement Learning</span>
+            <span class="pill">Risk Analytics</span>
             <span class="pill">Quant Research</span>
-            <span class="pill">Financial Data Science</span>
+            <span class="pill">Reinforcement Learning</span>
           </div>
         </div>
       </div>
@@ -517,21 +543,24 @@
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Senior Risk Analyst &amp; Data Analytics Instructor — Creditinfo, Prague, Czechia</div>
+            <div class="role-title">Senior Risk Analyst, Team Leader &amp; Lead Instructor — Creditinfo, Prague, Czechia</div>
             <div class="role-date">2022 – 2025</div>
           </div>
           <div class="muted">
-            Developed and monitored credit risk models and scorecards across multiple markets, covering SME, retail, microfinance, and fraud use cases using Python, SQL, and R.
+            Led the development of advanced credit and fraud scorecards across multiple international markets, including retail, SME, corporate, fintech, agricultural, and Buy Now Pay Later portfolios.
+            Built and validated scorecards for products such as corporate BNPL, fraud detection, and broader credit risk use cases using Python, SQL, and R.
+            Served as a senior team member with leadership responsibilities, contributed to hiring procedures, and supported the development of analytics talent within the organization.
+            Acted as lead instructor in a Creditinfo bootcamp in Africa, where I trained banking professionals across the region on how to design, develop, and validate scorecards from scratch.
           </div>
         </div>
 
         <div class="role-item">
           <div class="role-top">
             <div class="role-title">Crypto &amp; Equity Analyst — VF Investment / VisionFactory, Barcelona, Spain</div>
-            <div class="role-date">2025</div>
+            <div class="role-date">2021 – 2025</div>
           </div>
           <div class="muted">
-            Worked on equity and crypto market analysis, portfolio insights, and valuation-focused research.
+            Worked on equity and crypto market analysis, valuation research, and portfolio-oriented financial insights with a focus on investment analytics and market behavior.
           </div>
         </div>
 
@@ -547,16 +576,12 @@
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Researcher / Research Fellow / Teaching Assistant — Maynooth University &amp; FMC2, Ireland</div>
+            <div class="role-title">Researcher, Research Fellow &amp; Teaching Assistant — Maynooth University &amp; FMC2, Ireland</div>
             <div class="role-date">2018 – 2022</div>
           </div>
           <div class="muted">
-            Conducted research in empirical finance, asset pricing, portfolio and risk management, and machine learning in finance.
+            Conducted research in empirical finance, financial econometrics, security classification, asset pricing, portfolio and risk management, and later expanded into AI and machine learning applications in finance.
           </div>
-        </div>
-
-        <div class="footer-note">
-          You can add more roles later if you want the full employment timeline.
         </div>
       </div>
     </section>
@@ -641,20 +666,20 @@
     <section id="projects" class="section">
       <div class="grid-2">
         <div class="card">
-          <h2>Portfolio &amp; Asset Pricing</h2>
+          <h2>AI, ML &amp; Portfolio Analytics</h2>
           <ul class="list-clean">
-            <li>Portfolio optimization frameworks using traditional allocation methods and reinforcement learning.</li>
-            <li>Asset pricing analysis for green, grey, and red securities using Fama-French and Carhart approaches.</li>
-            <li>Research on crisis sentiment, return behavior, and factor structure in EU financial markets.</li>
+            <li>Developed AI and machine learning frameworks for portfolio construction, ranking, and optimization.</li>
+            <li>Applied reinforcement learning and learning-to-rank approaches to portfolio management and allocation strategies.</li>
+            <li>Built research-driven asset pricing and market analysis models across securities with different environmental classifications.</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Risk &amp; Credit Analytics</h2>
+          <h2>Risk, Credit &amp; Fraud Modeling</h2>
           <ul class="list-clean">
-            <li>Credit scorecard development across retail, SME, agricultural, and fintech lending markets.</li>
-            <li>Risk model validation using AUC, Gini, KS, and monitoring frameworks.</li>
-            <li>Revenue optimization and risk mitigation for nano- and micro-loan portfolios.</li>
+            <li>Designed and validated credit and fraud scorecards across international banking and fintech markets.</li>
+            <li>Built scorecards for corporate BNPL, SME, retail, microfinance, agricultural, and fraud-related products.</li>
+            <li>Led model training, analytics instruction, and scorecard development bootcamps for banking teams in Africa.</li>
           </ul>
         </div>
       </div>
@@ -700,7 +725,7 @@
       <div class="card">
         <h2>Education</h2>
         <ul class="list-clean">
-          <li><strong>PhD in Empirical Finance</strong> — Maynooth University, Ireland</li>
+          <li><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong> — Maynooth University, Ireland</li>
           <li><strong>MSc in Applied Mathematics</strong> — Democritus University of Thrace, Greece</li>
           <li><strong>MSc in Data and Web Science</strong> — Aristotle University of Thessaloniki, Greece</li>
           <li><strong>MSc in Business Analytics &amp; Data Science</strong> — University of Macedonia, Greece</li>
@@ -738,7 +763,7 @@
           <h2>Domain Expertise</h2>
           <div class="pill-row">
             <span class="pill">Credit Risk Modeling</span>
-            <span class="pill">Scorecards</span>
+            <span class="pill">Fraud Scorecards</span>
             <span class="pill">Financial Econometrics</span>
             <span class="pill">Risk Management</span>
             <span class="pill">Portfolio Construction</span>
@@ -761,7 +786,7 @@
           <span><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</span>
           <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
         </div>
       </div>
     </section>
