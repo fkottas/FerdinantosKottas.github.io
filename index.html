@@ -1,146 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferdinantos Kottas, MSc, MPhil, PhD</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferdinantos Kottas</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-2: #0c1729;
+      --panel: rgba(16, 24, 40, 0.88);
+      --panel-2: rgba(21, 32, 54, 0.95);
+      --text: #e9eef8;
+      --muted: #a7b3c8;
+      --accent: #8fb6ff;
+      --accent-2: #c6d8ff;
+      --line: #24324a;
+      --success: #8fd3a6;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      --radius: 22px;
+    }
 
-.tabs {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #334155;
-}
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-.tab {
-  cursor: pointer;
-  padding: 10px;
-}
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(88, 130, 255, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(80, 180, 255, 0.10), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      min-height: 100vh;
+    }
 
-.tab.active {
-  border-bottom: 2px solid #3b82f6;
-}
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
 
-.section {
-  display: none;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      animation: fadeUp 0.75s ease;
+    }
 
-.section.active {
-  display: block;
-}
+    .photo-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+    }
 
-.profile {
-  display: flex;
-  gap: 20px;
-}
+    .photo-wrap img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+      background: #101828;
+    }
 
-.profile img {
-  width: 160px;
-  border-radius: 50%;
-}
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
 
-.links a {
-  margin-right: 10px;
-  color: #60a5fa;
-  text-decoration: none;
-}
-</style>
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 10px rgba(143, 211, 166, 0.8);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 1.08;
+      font-weight: 800;
+    }
+
+    .headline {
+      margin: 14px 0 18px;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: var(--accent-2);
+      font-weight: 600;
+      max-width: 900px;
+    }
+
+    .bio-text {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 860px;
+      font-size: 1rem;
+    }
+
+    .icon-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .icon-links a,
+    .icon-links span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      font-size: 0.95rem;
+    }
+
+    .icon-links a:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: rgba(31, 45, 72, 0.98);
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 26px 0 22px;
+      animation: fadeUp 0.85s ease;
+    }
+
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      padding: 12px 18px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.18s ease;
+    }
+
+    .tab:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #b9cfff 0%, #8fb6ff 100%);
+      color: #0a1324;
+      border-color: transparent;
+      box-shadow: 0 10px 22px rgba(143, 182, 255, 0.25);
+    }
+
+    .section {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .muted {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .list-clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list-clean li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .list-clean li:last-child {
+      border-bottom: none;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(143, 182, 255, 0.09);
+      color: var(--accent-2);
+      border: 1px solid rgba(143, 182, 255, 0.18);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .pub-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      margin: 0 0 6px;
+      font-size: 1.04rem;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pub-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--accent-2);
+      font-size: 0.92rem;
+      transition: all 0.18s ease;
+    }
+
+    .pub-links a:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .scholar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .scholar-badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .role-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .role-item:last-child {
+      border-bottom: none;
+    }
+
+    .role-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .role-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .role-date {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-wrap {
+        align-items: center;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .icon-links {
+        justify-content: center;
+      }
+
+      .grid,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 18px 12px 42px;
+      }
+
+      .hero,
+      .card {
+        padding: 18px;
+      }
+
+      .photo-wrap img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
-
-<h1>Ferdinantos Kottas, MSc, MPhil, PhD</h1>
-<p>Quant & Risk Data Scientist | AI, Machine Learning, Asset Pricing, Risk & Portfolio Management</p>
-
-<div class="tabs">
-  <div class="tab active" onclick="openTab('bio')">Bio</div>
-  <div class="tab" onclick="openTab('publications')">Publications</div>
-  <div class="tab" onclick="openTab('projects')">Projects</div>
-  <div class="tab" onclick="openTab('courses')">Courses</div>
-</div>
-
-<!-- BIO -->
-<div id="bio" class="section active">
-  <div class="profile">
-    <img src="profile.jpg">
-
-    <div>
-      <p>
-      PhD-trained Quantitative Finance and Risk Data Scientist with strong expertise in asset pricing, portfolio optimization, and credit risk modeling.
-      </p>
-
-      <p>
-      Experienced in applying machine learning and econometric methods to financial markets, including reinforcement learning, algorithmic trading, and large-scale risk analytics.
-      </p>
-
-      <p>
-      Published researcher with multiple peer-reviewed papers in financial economics and risk management.
-      </p>
-
-      <div class="links">
-        <a href="mailto:ferdinantosk@math.uoa.gr">Email</a>
-        <a href="https://github.com/fkottas">GitHub</a>
-        <a href="https://www.linkedin.com/in/ferdinantos-kottas/">LinkedIn</a>
-        <a href="https://orcid.org/0009-0003-5879-3461">ORCID</a>
-        <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el">Scholar</a>
-        <a href="https://www.kaggle.com/ferdinantoskottas">Kaggle</a>
-        <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas">ResearchGate</a>
+    <section class="hero">
+      <div class="photo-wrap">
+        <img src="profile.jpg" alt="Ferdinantos Kottas profile photo">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Open to opportunities in finance, risk, quant research, and data science
+        </div>
       </div>
 
-      <p>Dublin, Ireland | +353831012005</p>
+      <div class="hero-content">
+        <div class="eyebrow">Quant Finance • Risk Analytics • Research</div>
+        <h1>Ferdinantos Kottas, MSc, MPhil, PhD</h1>
+        <p class="headline">
+          Quant &amp; Risk Data Scientist | AI, Machine Learning, Asset Pricing, Risk &amp; Portfolio Management
+        </p>
+        <p class="bio-text">
+          Quantitative finance and risk data scientist with a PhD background in empirical finance, financial econometrics, and machine learning applications in financial markets.
+          My work combines asset pricing, portfolio construction, credit risk modeling, and AI-driven analytics, with experience spanning research, risk management, and financial data science.
+          I focus on building rigorous, practical solutions that connect advanced quantitative methods with real-world decision-making in finance.
+        </p>
+
+        <div class="icon-links">
+          <a href="mailto:ferdinantosk@math.uoa.gr"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="tel:+353831012005"><i class="fa-solid fa-phone"></i> +353831012005</a>
+          <span><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</span>
+          <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.kaggle.com/ferdinantoskottas" target="_blank"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
+          <a href="https://orcid.org/0009-0003-5879-3461" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+          <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+          <a href="https://www.fmc-cluster.org/people/researchteam/" target="_blank"><i class="fa-solid fa-building-columns"></i> FMC Research Fellow</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" onclick="openTab(event, 'bio')">Bio</button>
+      <button class="tab" onclick="openTab(event, 'experience')">Experience</button>
+      <button class="tab" onclick="openTab(event, 'publications')">Publications</button>
+      <button class="tab" onclick="openTab(event, 'working-papers')">Working Papers</button>
+      <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
+      <button class="tab" onclick="openTab(event, 'certifications')">Certifications</button>
+      <button class="tab" onclick="openTab(event, 'courses')">Courses & Teaching</button>
+      <button class="tab" onclick="openTab(event, 'education')">Education</button>
+      <button class="tab" onclick="openTab(event, 'skills')">Skills</button>
+      <button class="tab" onclick="openTab(event, 'contact')">Contact</button>
     </div>
+
+    <section id="bio" class="section active">
+      <div class="grid">
+        <div class="card">
+          <h2>Professional Profile</h2>
+          <p class="muted">
+            I work at the intersection of quantitative finance, machine learning, and risk analytics, with experience across credit risk modeling, portfolio management, empirical asset pricing, and econometric analysis.
+            My background combines academic research with applied financial data science, allowing me to design models and frameworks that are both methodologically rigorous and commercially relevant.
+          </p>
+          <p class="muted">
+            My research and applied work cover green and traditional securities, factor models, reinforcement learning for portfolio construction, credit scorecard development, and analytics for financial decision-making.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Focus Areas</h2>
+          <div class="pill-row">
+            <span class="pill">Asset Pricing</span>
+            <span class="pill">Credit Risk</span>
+            <span class="pill">Portfolio Optimization</span>
+            <span class="pill">Financial Econometrics</span>
+            <span class="pill">Machine Learning in Finance</span>
+            <span class="pill">AI in Risk Modeling</span>
+            <span class="pill">Reinforcement Learning</span>
+            <span class="pill">Quant Research</span>
+            <span class="pill">Financial Data Science</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="card">
+        <h2>Selected Experience</h2>
+
+        <div class="role-item">
+          <div class="role-top">
+            <div class="role-title">Senior Risk Analyst &amp; Data Analytics Instructor — Creditinfo, Prague, Czechia</div>
+            <div class="role-date">2022 – 2025</div>
+          </div>
+          <div class="muted">
+            Developed and monitored credit risk models and scorecards across multiple markets, covering SME, retail, microfinance, and fraud use cases using Python, SQL, and R.
+          </div>
+        </div>
+
+        <div class="role-item">
+          <div class="role-top">
+            <div class="role-title">Crypto &amp; Equity Analyst — VF Investment / VisionFactory, Barcelona, Spain</div>
+            <div class="role-date">2025</div>
+          </div>
+          <div class="muted">
+            Worked on equity and crypto market analysis, portfolio insights, and valuation-focused research.
+          </div>
+        </div>
+
+        <div class="role-item">
+          <div class="role-top">
+            <div class="role-title">Credit Risk Data Scientist — Optasia, Athens, Greece</div>
+            <div class="role-date">2021 – 2022</div>
+          </div>
+          <div class="muted">
+            Designed and implemented credit risk models, scorecards, monitoring processes, and mitigation strategies for loan portfolios.
+          </div>
+        </div>
+
+        <div class="role-item">
+          <div class="role-top">
+            <div class="role-title">Researcher / Research Fellow / Teaching Assistant — Maynooth University &amp; FMC2, Ireland</div>
+            <div class="role-date">2018 – 2022</div>
+          </div>
+          <div class="muted">
+            Conducted research in empirical finance, asset pricing, portfolio and risk management, and machine learning in finance.
+          </div>
+        </div>
+
+        <div class="footer-note">
+          You can add more roles later if you want the full employment timeline.
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="card">
+        <div class="scholar-header">
+          <h2>Publications</h2>
+          <div class="scholar-badge">4 published • 1 accepted</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Performance of Green vis-à-vis Red EU Securities</div>
+          <div class="pub-meta">Investment Analysts Journal, 53(3), 2024</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1080/10293523.2024.2408827" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Empirical Asset Pricing Models for Green, Grey, and Red EU Securities: A Fama-French and Carhart Model Approach</div>
+          <div class="pub-meta">Journal of Risk and Financial Management, 18(5), 2025</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/jrfm18050282" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Factor Structure of Green, Grey, and Red EU Securities</div>
+          <div class="pub-meta">Risks, 13(9), 2025</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/risks13090176" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">A Hybrid Genetic Algorithm with Learning-to-Rank-to-Optimization for US Equity Portfolio Construction</div>
+          <div class="pub-meta">International Journal of Financial Studies, 14(4), 2026</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/ijfs14040095" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">European Green, Grey, Red Securities and Crisis Sentiment</div>
+          <div class="pub-meta">Accepted for publication in <em>Review of Behavioral Economics</em></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="working-papers" class="section">
+      <div class="card">
+        <h2>Working Papers</h2>
+
+        <div class="pub-item">
+          <div class="pub-title">Bayesian Credit Risk Modelling</div>
+          <div class="pub-meta">Working Paper</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">European Bank Equities and Crisis Sentiment</div>
+          <div class="pub-meta">Working Paper</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Approach of Genetic Algorithm to Reinforcement Learning using Learning-to-Rank for US Equity Portfolio Management</div>
+          <div class="pub-meta">Working Paper</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Digital Currencies and Policies</div>
+          <div class="pub-meta">Working Paper</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Additional ongoing research paper</div>
+          <div class="pub-meta">Working Paper</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Portfolio &amp; Asset Pricing</h2>
+          <ul class="list-clean">
+            <li>Portfolio optimization frameworks using traditional allocation methods and reinforcement learning.</li>
+            <li>Asset pricing analysis for green, grey, and red securities using Fama-French and Carhart approaches.</li>
+            <li>Research on crisis sentiment, return behavior, and factor structure in EU financial markets.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Risk &amp; Credit Analytics</h2>
+          <ul class="list-clean">
+            <li>Credit scorecard development across retail, SME, agricultural, and fintech lending markets.</li>
+            <li>Risk model validation using AUC, Gini, KS, and monitoring frameworks.</li>
+            <li>Revenue optimization and risk mitigation for nano- and micro-loan portfolios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Professional Certifications</h2>
+          <ul class="list-clean">
+            <li>IBM Data Science Professional Certificate</li>
+            <li>Professional Data Analyst Certificate (DataCamp)</li>
+            <li>Azure Data Scientist Associate</li>
+            <li>Blockchain Developer</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Professional Qualifications</h2>
+          <ul class="list-clean">
+            <li>FRM® Level I Candidate</li>
+            <li>ACCA — Certified with F1–F4 papers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <div class="card">
+        <h2>Courses &amp; Teaching</h2>
+        <ul class="list-clean">
+          <li>AI and Portfolio Management</li>
+          <li>Mathematics in Data Science</li>
+          <li>Blockchain Architecture and Programming in Solidity</li>
+          <li>Machine Learning in Finance</li>
+          <li>Database management in Finance</li>
+          <li>AI in Risk modeling and management</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="card">
+        <h2>Education</h2>
+        <ul class="list-clean">
+          <li><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong> — Maynooth University, Ireland</li>
+          <li><strong>MSc in Applied Mathematics</strong> — Democritus University of Thrace, Greece</li>
+          <li><strong>MSc in Data and Web Science</strong> — Aristotle University of Thessaloniki, Greece</li>
+          <li><strong>MSc in Business Analytics &amp; Data Science</strong> — University of Macedonia, Greece</li>
+          <li><strong>MPhil in Economics</strong> — National &amp; Kapodistrian University of Athens, Greece</li>
+          <li><strong>MSc in Accounting &amp; Finance</strong> — Athens University of Economics and Business, Greece</li>
+          <li><strong>BSc in Applied Mathematics</strong> — National &amp; Kapodistrian University of Athens, Greece</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Technical Skills</h2>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">R</span>
+            <span class="pill">SQL</span>
+            <span class="pill">MATLAB</span>
+            <span class="pill">Fortran</span>
+            <span class="pill">Mathematica</span>
+            <span class="pill">Stata</span>
+            <span class="pill">EViews</span>
+            <span class="pill">JMP</span>
+            <span class="pill">Alteryx</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">Neo4j</span>
+            <span class="pill">SPARQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Domain Expertise</h2>
+          <div class="pill-row">
+            <span class="pill">Credit Risk Modeling</span>
+            <span class="pill">Scorecards</span>
+            <span class="pill">Financial Econometrics</span>
+            <span class="pill">Risk Management</span>
+            <span class="pill">Portfolio Construction</span>
+            <span class="pill">Reinforcement Learning</span>
+            <span class="pill">Valuation</span>
+            <span class="pill">Asset Pricing</span>
+            <span class="pill">Econometric Forecasting</span>
+            <span class="pill">Algorithmic Trading</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="card">
+        <h2>Contact</h2>
+        <div class="icon-links">
+          <a href="mailto:ferdinantosk@math.uoa.gr"><i class="fa-solid fa-envelope"></i> ferdinantosk@math.uoa.gr</a>
+          <a href="tel:+353831012005"><i class="fa-solid fa-phone"></i> +353831012005</a>
+          <span><i class="fa-solid fa-location-dot"></i> Dublin, Ireland</span>
+          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+        </div>
+      </div>
+    </section>
+
   </div>
-</div>
 
-<!-- PUBLICATIONS -->
-<div id="publications" class="section">
-  <h2>Publications</h2>
-  <p>Performance of Green vs Red EU Securities (2024)</p>
-  <p>Empirical Asset Pricing Models (2025)</p>
-  <p>Factor Structure of EU Securities (2025)</p>
-</div>
+  <script>
+    function openTab(event, tabId) {
+      const sections = document.querySelectorAll('.section');
+      const tabs = document.querySelectorAll('.tab');
 
-<!-- PROJECTS -->
-<div id="projects" class="section">
-  <h2>Projects</h2>
-  <p>Portfolio Optimization using Reinforcement Learning</p>
-  <p>Credit Risk Scorecards (Global Markets)</p>
-</div>
+      sections.forEach(section => section.classList.remove('active'));
+      tabs.forEach(tab => tab.classList.remove('active'));
 
-<!-- COURSES -->
-<div id="courses" class="section">
-  <h2>Courses & Certifications</h2>
-  <p>IBM Data Science Certificate</p>
-  <p>Azure Data Scientist Associate</p>
-</div>
-
-</div>
-
-<script>
-function openTab(tabId) {
-  document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-
-  document.getElementById(tabId).classList.add('active');
-  event.target.classList.add('active');
-}
-</script>
-
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
