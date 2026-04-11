@@ -1,69 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | CV</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 {
-      color: #111;
-    }
-    .top {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    a {
-      color: #0a66c2;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferdinantos Kottas</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  border-bottom: 2px solid #3b82f6;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.profile {
+  display: flex;
+  gap: 20px;
+}
+
+.profile img {
+  width: 160px;
+  border-radius: 50%;
+}
+
+.links a {
+  margin-right: 10px;
+  color: #60a5fa;
+  text-decoration: none;
+}
+</style>
 </head>
+
 <body>
-  <div class="top">
-    <h1>Your Name</h1>
-    <p>Junior Developer | Python | Web Development</p>
-    <p>
-      <a href="mailto:youremail@example.com">Email</a> |
-      <a href="https://github.com/yourusername">GitHub</a> |
-      <a href="https://linkedin.com/in/yourname">LinkedIn</a>
-    </p>
-  </div>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>I am a motivated developer with an interest in building clean and useful software.</p>
-  </div>
+<div class="container">
 
-  <div class="section">
-    <h2>Skills</h2>
-    <p>Python, HTML, CSS, JavaScript, Git, GitHub</p>
-  </div>
+<h1>Ferdinantos Kottas</h1>
+<p>Quantitative Finance & Risk Data Scientist | PhD | Machine Learning, Asset Pricing & Credit Risk</p>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <p><strong>Project 1:</strong> Short description of what you built.</p>
-    <p><strong>Project 2:</strong> Short description of what you built.</p>
-  </div>
+<div class="tabs">
+  <div class="tab active" onclick="openTab('bio')">Bio</div>
+  <div class="tab" onclick="openTab('publications')">Publications</div>
+  <div class="tab" onclick="openTab('projects')">Projects</div>
+  <div class="tab" onclick="openTab('courses')">Courses</div>
+</div>
 
-  <div class="section">
-    <h2>Education</h2>
-    <p>Your degree / school / certifications</p>
-  </div>
+<!-- BIO -->
+<div id="bio" class="section active">
+  <div class="profile">
+    <img src="profile.jpg">
 
-  <div class="section">
-    <h2>Experience</h2>
-    <p>Your work experience or internships</p>
+    <div>
+      <p>
+      PhD-trained Quantitative Finance and Risk Data Scientist with strong expertise in asset pricing, portfolio optimization, and credit risk modeling.
+      </p>
+
+      <p>
+      Experienced in applying machine learning and econometric methods to financial markets, including reinforcement learning, algorithmic trading, and large-scale risk analytics.
+      </p>
+
+      <p>
+      Published researcher with multiple peer-reviewed papers in financial economics and risk management.
+      </p>
+
+      <div class="links">
+        <a href="mailto:ferdinantosk@math.uoa.gr">Email</a>
+        <a href="https://github.com/fkottas">GitHub</a>
+        <a href="https://www.linkedin.com/in/ferdinantos-kottas/">LinkedIn</a>
+        <a href="https://orcid.org/0009-0003-5879-3461">ORCID</a>
+        <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el">Scholar</a>
+        <a href="https://www.kaggle.com/ferdinantoskottas">Kaggle</a>
+        <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas">ResearchGate</a>
+      </div>
+
+      <p>Dublin, Ireland | +353831012005</p>
+    </div>
   </div>
+</div>
+
+<!-- PUBLICATIONS -->
+<div id="publications" class="section">
+  <h2>Publications</h2>
+  <p>Performance of Green vs Red EU Securities (2024)</p>
+  <p>Empirical Asset Pricing Models (2025)</p>
+  <p>Factor Structure of EU Securities (2025)</p>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+  <h2>Projects</h2>
+  <p>Portfolio Optimization using Reinforcement Learning</p>
+  <p>Credit Risk Scorecards (Global Markets)</p>
+</div>
+
+<!-- COURSES -->
+<div id="courses" class="section">
+  <h2>Courses & Certifications</h2>
+  <p>IBM Data Science Certificate</p>
+  <p>Azure Data Scientist Associate</p>
+</div>
+
+</div>
+
+<script>
+function openTab(tabId) {
+  document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
 </body>
 </html>
