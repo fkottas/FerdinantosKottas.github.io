@@ -196,11 +196,14 @@
       display: flex;
       flex-wrap: nowrap;
       gap: 12px;
-      margin: 26px 0 22px;
+      margin: 38px 0 24px;
+      padding: 10px 12px;
+      background: rgba(12, 23, 41, 0.55);
+      border: 1px solid var(--line);
+      border-radius: 18px;
       animation: fadeUp 0.85s ease;
       overflow-x: auto;
       overflow-y: hidden;
-      padding-bottom: 6px;
       scrollbar-width: thin;
     }
 
@@ -522,10 +525,10 @@
       <button class="tab" onclick="openTab(event, 'experience')">Experience</button>
       <button class="tab" onclick="openTab(event, 'education')">Education</button>
       <button class="tab" onclick="openTab(event, 'publications')">Publications</button>
-      <button class="tab" onclick="openTab(event, 'working-papers')">Working Papers</button>
+      <button class="tab" onclick="openTab(event, 'working-papers')">Working Projects</button>
       <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
       <button class="tab" onclick="openTab(event, 'certifications')">Certifications</button>
-      <button class="tab" onclick="openTab(event, 'courses')">Courses & Teaching</button>
+      <button class="tab" onclick="openTab(event, 'courses')">Teaching Course</button>
       <button class="tab" onclick="openTab(event, 'skills')">Skills</button>
       <button class="tab" onclick="openTab(event, 'contact')">Contact</button>
     </div>
@@ -680,7 +683,7 @@
 
     <section id="working-papers" class="section">
       <div class="card">
-        <h2>Working Papers</h2>
+        <h2>Working Projects</h2>
 
         <div class="pub-item">
           <div class="pub-title">Bayesian Credit Risk Modelling</div>
@@ -755,7 +758,7 @@
 
     <section id="courses" class="section">
       <div class="card">
-        <h2>Courses &amp; Teaching</h2>
+        <h2>Teaching Course</h2>
         <ul class="list-clean">
           <li>AI and Portfolio Management</li>
           <li>Mathematics in Data Science</li>
