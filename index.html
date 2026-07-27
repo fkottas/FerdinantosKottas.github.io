@@ -445,6 +445,22 @@
       align-items: start;
     }
 
+    .bio-split .pill-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .bio-split .pill {
+      width: 100%;
+      max-width: none;
+      min-height: 42px;
+      justify-content: flex-start;
+      padding: 9px 12px;
+      border-radius: 13px;
+      text-align: left;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
@@ -504,6 +520,14 @@
         min-height: 34px;
         padding: 7px 10px;
         font-size: 0.84rem;
+      }
+
+      .bio-split .pill-row {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-split .pill {
+        min-height: 38px;
       }
     }
   </style>
@@ -586,26 +610,19 @@
           <div>
             <h2>Focus Areas</h2>
             <div class="pill-row">
-              <span class="pill">AI in Finance</span>
-              <span class="pill">ML in Finance</span>
-              <span class="pill">Portfolio Management</span>
-              <span class="pill">Asset Pricing</span>
+              <span class="pill">AI &amp; ML in Finance</span>
               <span class="pill">Credit Risk</span>
               <span class="pill">IFRS 9 / ECL</span>
               <span class="pill">Basel IRB</span>
               <span class="pill">PD / LGD / EAD</span>
               <span class="pill">Credit Policies</span>
               <span class="pill">Limit Optimization</span>
-              <span class="pill">Risk–Revenue</span>
               <span class="pill">Credit &amp; Fraud Models</span>
-              <span class="pill">Validation</span>
-              <span class="pill">Monitoring</span>
-              <span class="pill">Model Governance</span>
-              <span class="pill">Stress Testing</span>
+              <span class="pill">Validation &amp; Backtesting</span>
+              <span class="pill">Monitoring &amp; Governance</span>
+              <span class="pill">Portfolio Analytics</span>
               <span class="pill">Financial Econometrics</span>
-              <span class="pill">Risk Analytics</span>
-              <span class="pill">Quant Research</span>
-              <span class="pill">Reinforcement Learning</span>
+              <span class="pill">Stress Testing</span>
               <span class="pill">Model Deployment</span>
             </div>
           </div>
