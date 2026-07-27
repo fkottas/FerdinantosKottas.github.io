@@ -322,20 +322,27 @@
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
+      align-items: flex-start;
       align-content: flex-start;
     }
 
     .pill {
-      display: inline-block;
-      padding: 10px 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 220px;
+      min-height: 36px;
+      padding: 8px 11px;
       border-radius: 999px;
       background: rgba(143, 182, 255, 0.09);
       color: var(--accent-2);
       border: 1px solid rgba(143, 182, 255, 0.18);
-      font-size: 0.92rem;
+      font-size: 0.87rem;
       font-weight: 600;
-      white-space: nowrap;
+      line-height: 1.3;
+      text-align: center;
+      white-space: normal;
     }
 
     .pub-item {
@@ -491,6 +498,13 @@
         width: 210px;
         height: 255px;
       }
+
+      .pill {
+        max-width: 100%;
+        min-height: 34px;
+        padding: 7px 10px;
+        font-size: 0.84rem;
+      }
     }
   </style>
 </head>
@@ -573,25 +587,26 @@
             <h2>Focus Areas</h2>
             <div class="pill-row">
               <span class="pill">AI in Finance</span>
-              <span class="pill">Machine Learning in Finance</span>
+              <span class="pill">ML in Finance</span>
               <span class="pill">Portfolio Management</span>
               <span class="pill">Asset Pricing</span>
-              <span class="pill">Credit Risk Modeling</span>
-              <span class="pill">IFRS 9 &amp; Expected Credit Loss</span>
+              <span class="pill">Credit Risk</span>
+              <span class="pill">IFRS 9 / ECL</span>
               <span class="pill">Basel IRB</span>
               <span class="pill">PD / LGD / EAD</span>
-              <span class="pill">Credit Policy Design</span>
-              <span class="pill">Credit-Limit Optimization</span>
-              <span class="pill">Risk–Revenue Optimization</span>
-              <span class="pill">Credit &amp; Fraud Scorecards</span>
-              <span class="pill">Model Validation &amp; Monitoring</span>
-              <span class="pill">Credit Risk Governance</span>
+              <span class="pill">Credit Policies</span>
+              <span class="pill">Limit Optimization</span>
+              <span class="pill">Risk–Revenue</span>
+              <span class="pill">Credit &amp; Fraud Models</span>
+              <span class="pill">Validation</span>
+              <span class="pill">Monitoring</span>
+              <span class="pill">Model Governance</span>
               <span class="pill">Stress Testing</span>
               <span class="pill">Financial Econometrics</span>
               <span class="pill">Risk Analytics</span>
               <span class="pill">Quant Research</span>
               <span class="pill">Reinforcement Learning</span>
-              <span class="pill">Scorecard Development &amp; Deployment</span>
+              <span class="pill">Model Deployment</span>
             </div>
           </div>
         </div>
@@ -620,7 +635,8 @@
           <div class="muted">
             Led the development of advanced credit and fraud scorecards across multiple international markets, serving banks, fintechs, leasing and car-rental companies, mobile operators, and other financial and commercial institutions.
             Built and validated scorecards for retail, SME, corporate, agricultural, fraud, and Buy Now Pay Later products, including corporate BNPL solutions, using Python, SQL, and R.
-            Covered the end-to-end scorecard lifecycle: data assessment, feature engineering, segmentation, model estimation, calibration, validation, documentation, implementation support, performance monitoring, and stakeholder communication.
+            Responsibilities included IFRS 9 and Basel IRB model components covering PD, LGD, EAD, expected credit loss, staging and SICR, calibration, validation and backtesting, monitoring, model documentation and governance, stress testing, and portfolio decisioning.
+            Covered the end-to-end model lifecycle: data assessment, feature engineering, segmentation, estimation, implementation support, performance monitoring, and stakeholder communication.
             Held senior and team leadership responsibilities, contributed to hiring and team development, and strengthened analytics capability inside the organization.
             Chosen as lead instructor for a major bootcamp in Africa, training banking professionals to design, develop, validate, and monitor scorecards from scratch.
           </div>
@@ -642,7 +658,9 @@
             <div class="role-date">2021 – 2022</div>
           </div>
           <div class="muted">
-            Designed and implemented credit-risk models, scorecards, portfolio monitoring, risk segmentation, and mitigation strategies for loan portfolios. Developed credit policies and optimized credit-limit assignment to increase revenues while controlling exposure, portfolio risk, and expected losses.
+            Designed and implemented credit-risk models, scorecards, risk segmentation, portfolio monitoring, and mitigation strategies for loan portfolios.
+            Developed credit policies and optimized credit-limit assignment to increase revenues while controlling exposure, approval rates, portfolio risk, and expected losses.
+            Performed cohort and vintage analysis, delinquency and default tracking, roll-rate and cure-rate analysis, and portfolio performance monitoring to refine credit policies, limits, and risk–revenue decisions.
           </div>
         </div>
 
@@ -663,16 +681,16 @@
         <h2>Education</h2>
         <ul class="list-clean">
           <li>
+            <a href="https://www.maynoothuniversity.ie/school-business" target="_blank" rel="noopener noreferrer"><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            — Maynooth University, Ireland
+          </li>
+          <li>
             <a href="https://www.technoeconomics.epu.ntua.gr/" target="_blank" rel="noopener noreferrer"><strong>MSc in Techno-Economic Systems</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — School of Electrical and Computer Engineering, National Technical University of Athens (NTUA), Greece — <strong>Ongoing</strong>
+            — National Technical University of Athens (NTUA), Greece — <strong>Ongoing</strong>
           </li>
           <li>
             <a href="https://msc.iee.ihu.gr/en/" target="_blank" rel="noopener noreferrer"><strong>MSc in Web Intelligence</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Department of Information and Electronic Engineering, International Hellenic University, Greece — <strong>Ongoing</strong>
-          </li>
-          <li>
-            <a href="https://www.maynoothuniversity.ie/school-business" target="_blank" rel="noopener noreferrer"><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Maynooth University School of Business, Ireland
+            — International Hellenic University, Greece — <strong>Ongoing</strong>
           </li>
           <li>
             <a href="https://pms.civil.duth.gr/en/am_en/" target="_blank" rel="noopener noreferrer"><strong>MSc in Applied Mathematics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -754,11 +772,6 @@
     <section id="working-papers" class="section">
       <div class="card">
         <h2>Working Projects</h2>
-
-        <div class="pub-item">
-          <div class="pub-title">Credit Risk Modeling for Basel and IFRS 9 using Python</div>
-          <div class="pub-meta">Applied book and implementation project covering scorecards, PD, LGD, EAD, expected credit loss, credit policies, credit-limit assignment and risk–revenue optimization, validation, monitoring, governance, stress testing, and portfolio decisioning</div>
-        </div>
 
         <div class="pub-item">
           <div class="pub-title">Bayesian Credit Risk Modelling</div>
@@ -881,20 +894,22 @@
           <div class="pill-row">
             <span class="pill">IFRS 9 / ECL</span>
             <span class="pill">Basel IRB</span>
-            <span class="pill">PD, LGD &amp; EAD</span>
-            <span class="pill">Credit Policy Design</span>
-            <span class="pill">Credit-Limit Assignment</span>
-            <span class="pill">Risk–Revenue Optimization</span>
-            <span class="pill">Credit Risk Modeling</span>
-            <span class="pill">Credit &amp; Fraud Scorecards</span>
-            <span class="pill">Model Calibration</span>
-            <span class="pill">Validation &amp; Backtesting</span>
-            <span class="pill">Model Monitoring &amp; Drift</span>
+            <span class="pill">PD / LGD / EAD</span>
+            <span class="pill">Credit Policies</span>
+            <span class="pill">Credit Limits</span>
+            <span class="pill">Risk–Revenue</span>
+            <span class="pill">Credit Models</span>
+            <span class="pill">Scorecards</span>
+            <span class="pill">Calibration</span>
+            <span class="pill">Validation</span>
+            <span class="pill">Backtesting</span>
+            <span class="pill">Monitoring &amp; Drift</span>
             <span class="pill">Stress Testing</span>
-            <span class="pill">Risk Grades &amp; Migration</span>
-            <span class="pill">Credit Portfolio Analytics</span>
-            <span class="pill">Model Risk &amp; Governance</span>
-            <span class="pill">Financial Econometrics</span>
+            <span class="pill">Risk Grades</span>
+            <span class="pill">Migration Analysis</span>
+            <span class="pill">Portfolio Analytics</span>
+            <span class="pill">Model Governance</span>
+            <span class="pill">Econometrics</span>
             <span class="pill">Risk Management</span>
             <span class="pill">Portfolio Management</span>
             <span class="pill">Reinforcement Learning</span>
