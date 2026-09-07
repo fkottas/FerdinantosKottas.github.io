@@ -3,20 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Ferdinantos Kottas | Quantitative Credit Risk & AI</title>
-  <meta name="description" content="Dr. Ferdinantos Kottas — quantitative credit-risk and AI specialist with experience in scorecards, credit policies, credit-limit optimization, PD/LGD/EAD, IFRS 9, Basel IRB, validation, monitoring, and machine learning in finance.">
+  <title>Dr. Ferdinantos Kottas | Credit Risk & Quantitative Data Science</title>
+  <meta name="description" content="Dr. Ferdinantos Kottas — senior credit-risk and quantitative data scientist specialising in credit-risk modelling, IFRS 9/ECL, model validation, machine learning, financial econometrics and quantitative finance.">
+  <meta name="robots" content="index,follow">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ferdinantos Kottas",
+    "honorificPrefix": "Dr.",
+    "jobTitle": "Senior Credit Risk & Quantitative Data Scientist",
+    "url": "https://fkottas.github.io/FerdinantosKottas.github.io/",
+    "sameAs": [
+      "https://github.com/fkottas",
+      "https://www.linkedin.com/in/ferdinantos-kottas/",
+      "https://orcid.org/0009-0003-5879-3461",
+      "https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el",
+      "https://www.researchgate.net/profile/Ferdinantos-Kottas"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #08111f;
       --bg-2: #0c1729;
-      --panel: rgba(16, 24, 40, 0.88);
-      --panel-2: rgba(21, 32, 54, 0.95);
+      --panel: rgba(16, 24, 40, 0.90);
+      --panel-2: rgba(21, 32, 54, 0.96);
       --text: #e9eef8;
       --muted: #a7b3c8;
       --accent: #8fb6ff;
@@ -27,10 +46,7 @@
       --radius: 22px;
     }
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -43,11 +59,7 @@
       min-height: 100vh;
     }
 
-    .container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 28px 18px 64px;
-    }
+    .container { max-width: 1240px; margin: 0 auto; padding: 28px 18px 64px; }
 
     .hero {
       display: grid;
@@ -59,46 +71,40 @@
       border-radius: 28px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
-      animation: fadeUp 0.75s ease;
+      animation: fadeUp .65s ease;
     }
 
-    .photo-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      align-items: flex-start;
-    }
-
+    .photo-wrap { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
     .photo-wrap img {
       width: 240px;
       height: 280px;
       object-fit: cover;
       object-position: center top;
       border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 14px 30px rgba(0,0,0,.35);
       background: #101828;
     }
 
     .status-badge {
       display: inline-flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
       padding: 10px 14px;
       background: var(--panel-2);
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 16px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: .90rem;
       line-height: 1.5;
     }
-
     .status-dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
+      margin-top: 5px;
       border-radius: 50%;
       background: var(--success);
-      box-shadow: 0 0 10px rgba(143, 211, 166, 0.8);
+      box-shadow: 0 0 10px rgba(143,211,166,.75);
       flex-shrink: 0;
     }
 
@@ -109,96 +115,55 @@
       border-radius: 18px;
       padding: 12px 14px;
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: .92rem;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
+    .contact-under-photo div { display: flex; align-items: center; gap: 10px; }
 
-    .contact-under-photo div {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-width: 0;
-    }
-
+    .hero-content { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
     .eyebrow {
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
+      letter-spacing: .12em;
+      font-size: .78rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      line-height: 1.08;
-      font-weight: 800;
-    }
-
+    h1 { margin: 0; font-size: 2.55rem; line-height: 1.08; font-weight: 800; }
     .headline {
       margin: 14px 0 18px;
       font-size: 1.08rem;
       line-height: 1.6;
       color: var(--accent-2);
       font-weight: 600;
-      max-width: 960px;
+      max-width: 940px;
     }
+    .bio-text { margin: 0; color: var(--muted); line-height: 1.82; max-width: 920px; font-size: 1rem; }
 
-    .bio-text {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.82;
-      max-width: 900px;
-      font-size: 1rem;
-    }
-
-    .icon-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .icon-links a,
-    .icon-links span {
+    .icon-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .icon-links a {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 11px 14px;
-      border-radius: 14px;
+      gap: 9px;
+      padding: 10px 13px;
+      border-radius: 13px;
       background: var(--panel-2);
       border: 1px solid var(--line);
       color: var(--text);
       text-decoration: none;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-      font-size: 0.95rem;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      font-size: .92rem;
       white-space: nowrap;
     }
-
-    .icon-links a:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      background: rgba(31, 45, 72, 0.98);
-    }
+    .icon-links a:hover { transform: translateY(-2px); border-color: var(--accent); background: rgba(31,45,72,.98); }
 
     .tabs {
       display: flex;
       flex-wrap: nowrap;
-      gap: 12px;
-      margin: 38px 0 24px;
-      animation: fadeUp 0.85s ease;
+      gap: 10px;
+      margin: 34px 0 22px;
       overflow-x: auto;
       overflow-y: hidden;
       padding: 4px 0 8px;
@@ -206,66 +171,31 @@
       position: relative;
       z-index: 5;
     }
-
-    .tabs::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .tabs::-webkit-scrollbar-thumb {
-      background: #30415f;
-      border-radius: 999px;
-    }
-
+    .tabs::-webkit-scrollbar { height: 8px; }
+    .tabs::-webkit-scrollbar-thumb { background: #30415f; border-radius: 999px; }
     .tab {
       border: 1px solid var(--line);
       background: var(--panel);
       color: var(--text);
-      padding: 12px 18px;
-      border-radius: 14px;
+      padding: 11px 16px;
+      border-radius: 13px;
       cursor: pointer;
       font-weight: 700;
-      transition: all 0.18s ease;
+      transition: all .18s ease;
       white-space: nowrap;
       flex: 0 0 auto;
     }
-
-    .tab:hover {
-      transform: translateY(-1px);
-      border-color: var(--accent);
-    }
-
+    .tab:hover { transform: translateY(-1px); border-color: var(--accent); }
     .tab.active {
       background: linear-gradient(135deg, #b9cfff 0%, #8fb6ff 100%);
       color: #0a1324;
       border-color: transparent;
-      box-shadow: 0 10px 22px rgba(143, 182, 255, 0.25);
-      position: relative;
-      z-index: 6;
-    }
-    
-    .section {
-      display: none;
-      animation: fadeIn 0.35s ease;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .section.active {
-      display: block;
-      margin-top: 6px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 18px;
+      box-shadow: 0 10px 22px rgba(143,182,255,.25);
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
+    .section { display: none; animation: fadeIn .30s ease; }
+    .section.active { display: block; margin-top: 6px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -274,275 +204,111 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
     }
+    .card h2 { margin: 0 0 14px; font-size: 1.35rem; }
+    .muted { color: var(--muted); line-height: 1.78; }
 
-    .card h2 {
-      margin: 0 0 14px;
-      font-size: 1.35rem;
-    }
+    .list-clean { list-style: none; padding: 0; margin: 0; }
+    .list-clean li { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); line-height: 1.7; }
+    .list-clean li:last-child { border-bottom: none; }
+    .list-clean a { color: var(--accent-2); text-decoration: none; }
+    .list-clean a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+    .list-clean a i { margin-left: 6px; font-size: .78em; }
 
-    .muted {
-      color: var(--muted);
-      line-height: 1.78;
-    }
-
-    .list-clean {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .list-clean li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .list-clean li:last-child {
-      border-bottom: none;
-    }
-
-    .list-clean a {
-      color: var(--accent-2);
-      text-decoration: none;
-      transition: color 0.18s ease;
-    }
-
-    .list-clean a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .list-clean a i {
-      margin-left: 6px;
-      font-size: 0.78em;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: flex-start;
-      align-content: flex-start;
-    }
-
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
     .pill {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      max-width: 220px;
-      min-height: 36px;
+      min-height: 34px;
       padding: 8px 11px;
       border-radius: 999px;
-      background: rgba(143, 182, 255, 0.09);
+      background: rgba(143,182,255,.09);
       color: var(--accent-2);
-      border: 1px solid rgba(143, 182, 255, 0.18);
-      font-size: 0.87rem;
+      border: 1px solid rgba(143,182,255,.18);
+      font-size: .86rem;
       font-weight: 600;
       line-height: 1.3;
       text-align: center;
-      white-space: normal;
     }
 
-    .pub-item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
+    .role-item, .pub-item { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .role-item:last-child, .pub-item:last-child { border-bottom: none; }
+    .role-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+    .role-title { font-weight: 700; font-size: 1rem; }
+    .role-date { color: var(--muted); font-size: .92rem; }
+    .pub-title { margin: 0 0 6px; font-size: 1.04rem; font-weight: 700; line-height: 1.55; }
+    .pub-meta { color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .pub-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
+    .pub-tag {
+      padding: 5px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(143,182,255,.16);
+      background: rgba(143,182,255,.07);
+      color: var(--accent-2);
+      font-size: .76rem;
+      font-weight: 600;
     }
-
-    .pub-item:last-child {
-      border-bottom: none;
-    }
-
-    .pub-title {
-      margin: 0 0 6px;
-      font-size: 1.04rem;
-      font-weight: 700;
-      line-height: 1.55;
-    }
-
-    .pub-meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-
-    .pub-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
+    .pub-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
     .pub-links a {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 12px;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 10px;
       text-decoration: none;
       border: 1px solid var(--line);
       background: var(--panel-2);
       color: var(--accent-2);
-      font-size: 0.92rem;
-      transition: all 0.18s ease;
+      font-size: .88rem;
     }
+    .pub-links a:hover { border-color: var(--accent); }
 
-    .pub-links a:hover {
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .scholar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-
+    .scholar-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
     .scholar-badge {
       padding: 8px 12px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: var(--panel-2);
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .88rem;
       white-space: nowrap;
     }
 
-    .role-item {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--line);
-    }
+    .bio-split { display: grid; grid-template-columns: 1.5fr 1fr; gap: 22px; align-items: start; }
+    .bio-split .pill-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+    .bio-split .pill { width: 100%; justify-content: flex-start; border-radius: 13px; text-align: left; }
+    .section-note { margin: -4px 0 12px; color: var(--muted); font-size: .9rem; line-height: 1.6; }
 
-    .role-item:last-child {
-      border-bottom: none;
-    }
-
-    .role-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 6px;
-    }
-
-    .role-title {
-      font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .role-date {
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .bio-split {
-      display: grid;
-      grid-template-columns: 1.55fr 1fr;
-      gap: 22px;
-      align-items: start;
-    }
-
-    .bio-split .pill-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 9px;
-    }
-
-    .bio-split .pill {
-      width: 100%;
-      max-width: none;
-      min-height: 42px;
-      justify-content: flex-start;
-      padding: 9px 12px;
-      border-radius: 13px;
-      text-align: left;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 980px) {
-      .hero,
-      .grid,
-      .grid-2,
-      .bio-split {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-wrap {
-        align-items: center;
-      }
-
-      .hero-content {
-        text-align: center;
-      }
-
-      .icon-links {
-        justify-content: center;
-      }
-
-      .contact-under-photo {
-        text-align: left;
-      }
+      .hero, .grid-2, .bio-split { grid-template-columns: 1fr; }
+      .photo-wrap { align-items: center; }
+      .hero-content { text-align: center; }
+      .icon-links { justify-content: center; }
+      .contact-under-photo { max-width: 360px; }
     }
-
     @media (max-width: 640px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .container {
-        padding: 18px 12px 42px;
-      }
-
-      .hero,
-      .card {
-        padding: 18px;
-      }
-
-      .photo-wrap img {
-        width: 210px;
-        height: 255px;
-      }
-
-      .pill {
-        max-width: 100%;
-        min-height: 34px;
-        padding: 7px 10px;
-        font-size: 0.84rem;
-      }
-
-      .bio-split .pill-row {
-        grid-template-columns: 1fr;
-      }
-
-      .bio-split .pill {
-        min-height: 38px;
-      }
+      h1 { font-size: 2rem; }
+      .container { padding: 18px 12px 42px; }
+      .hero, .card { padding: 18px; }
+      .photo-wrap img { width: 210px; height: 255px; }
+      .bio-split .pill-row { grid-template-columns: 1fr; }
+      .scholar-header { align-items: flex-start; flex-direction: column; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-
     <section class="hero">
       <div class="photo-wrap">
         <img src="profile.jpg" alt="Ferdinantos Kottas profile photo">
 
         <div class="status-badge">
           <span class="status-dot"></span>
-          Interested in AI and ML applications in finance, risk, and quantitative research
+          Credit Risk Modelling · Quantitative Finance · Machine Learning
         </div>
 
         <div class="contact-under-photo">
@@ -553,43 +319,37 @@
       </div>
 
       <div class="hero-content">
-        <div class="eyebrow">Quant • Risk Scientist &amp; Analytics • Researcher</div>
-
-        <h1>Ferdinantos Kottas, MSc, MPhil, PhD</h1>
+        <div class="eyebrow">Credit Risk · Quantitative Data Science · Research</div>
+        <h1>Ferdinantos Kottas, PhD</h1>
 
         <p class="headline">
-          Quantitative Credit Risk &amp; AI Specialist | IFRS 9, Basel IRB, Scorecards &amp; Machine Learning in Finance
+          Senior Credit Risk &amp; Quantitative Data Scientist | Credit Risk Modelling · IFRS 9/ECL · Machine Learning · Financial Econometrics
         </p>
 
         <p class="bio-text">
-          Quantitative credit-risk and finance specialist combining PhD-level expertise in empirical finance and financial econometrics with hands-on model development, validation, deployment support, and analytics leadership.
-          My work spans credit and fraud scorecards, credit-policy design, credit-limit assignment and revenue optimization, portfolio risk, predictive decision systems, and AI and machine learning for finance across banks, fintechs, leasing and mobility companies, telecom operators, and other data-driven institutions.
-          I bring practical experience across the credit-model lifecycle—from data preparation, feature engineering, segmentation, and calibration to validation, monitoring, documentation, and governance—together with specialist knowledge of IFRS 9 expected credit loss and Basel IRB frameworks.
+          PhD-qualified credit-risk and quantitative data scientist with hands-on experience across the end-to-end model lifecycle: data assessment, target definition, segmentation, feature engineering, scorecard development, calibration, validation, monitoring, early-warning analytics, implementation support, UAT and model governance. Professional work spans SME, retail, corporate, fintech, BNPL and other lending portfolios across international markets. I combine this applied credit-risk background with financial econometrics, quantitative finance and machine-learning research, including six peer-reviewed publications in asset pricing, behavioural finance and data-driven portfolio construction.
         </p>
 
         <div class="icon-links">
-          <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="https://www.kaggle.com/ferdinantoskottas" target="_blank"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
-          <a href="https://orcid.org/0009-0003-5879-3461" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
-          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-          <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-          <a href="https://www.fmc-cluster.org/people/researchteam/" target="_blank"><i class="fa-solid fa-building-columns"></i> FMC Research Fellow</a>
+          <a href="https://github.com/fkottas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.kaggle.com/ferdinantoskottas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
+          <a href="https://orcid.org/0009-0003-5879-3461" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+          <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
         </div>
       </div>
     </section>
 
-    <div class="tabs">
-      <button class="tab active" onclick="openTab(event, 'bio')">Bio</button>
-      <button class="tab" onclick="openTab(event, 'experience')">Experience</button>
-      <button class="tab" onclick="openTab(event, 'education')">Education</button>
-      <button class="tab" onclick="openTab(event, 'publications')">Publications</button>
-      <button class="tab" onclick="openTab(event, 'working-papers')">Working Projects</button>
-      <button class="tab" onclick="openTab(event, 'projects')">Projects</button>
-      <button class="tab" onclick="openTab(event, 'certifications')">Certifications</button>
-      <button class="tab" onclick="openTab(event, 'courses')">Teaching</button>
-      <button class="tab" onclick="openTab(event, 'skills')">Skills</button>
-      <button class="tab" onclick="openTab(event, 'contact')">Contact</button>
+    <div class="tabs" role="tablist" aria-label="CV sections">
+      <button class="tab active" onclick="openTab(event,'bio')">Profile</button>
+      <button class="tab" onclick="openTab(event,'experience')">Experience</button>
+      <button class="tab" onclick="openTab(event,'publications')">Publications</button>
+      <button class="tab" onclick="openTab(event,'research')">Research Pipeline</button>
+      <button class="tab" onclick="openTab(event,'education')">Education</button>
+      <button class="tab" onclick="openTab(event,'skills')">Expertise</button>
+      <button class="tab" onclick="openTab(event,'certifications')">Qualifications</button>
+      <button class="tab" onclick="openTab(event,'contact')">Contact</button>
     </div>
 
     <section id="bio" class="section active">
@@ -598,32 +358,28 @@
           <div>
             <h2>Professional Profile</h2>
             <p class="muted">
-              I specialize in quantitative credit risk, AI, and machine learning for finance, bridging rigorous research with real-world model development and business decisioning.
-              My experience includes application and behavioural scorecards, credit and fraud models, borrower and portfolio segmentation, credit-policy design, credit-limit assignment optimization, model calibration and validation, monitoring, and decision strategies designed to improve risk control, portfolio quality, and revenues.
+              My core professional focus is credit-risk modelling and decision analytics. I have worked across application, behavioural, collection, fraud and default-risk scorecards; PD/LGD/EAD and ECL-related analysis; early-warning systems; calibration; risk grades and cut-offs; model validation and monitoring; vintage/cohort analysis; delinquency, cure and recovery behaviour; credit-limit and acceptance strategies; implementation/UAT; and model documentation and governance.
             </p>
             <p class="muted">
-              My regulatory-modeling focus covers the full IFRS 9 and Basel IRB architecture: probability of default (PD), loss given default (LGD), exposure at default (EAD), expected credit loss, staging and significant increase in credit risk, lifetime risk measurement, risk grades, migration and cure analysis, stress testing, backtesting, model documentation, and governance.
-              I combine this credit-risk depth with financial econometrics, explainable machine learning, and leadership experience delivering analytical solutions for banks, fintechs, leasing, mobility, telecom, and other international institutions.
+              Alongside industry work, I conduct empirical research in asset pricing, portfolio management, financial econometrics and machine learning. This combination allows me to connect rigorous statistical modelling with practical risk decisions, model performance, implementation constraints and business outcomes.
             </p>
           </div>
 
           <div>
-            <h2>Focus Areas</h2>
+            <h2>Core Expertise</h2>
             <div class="pill-row">
-              <span class="pill">AI &amp; ML in Finance</span>
-              <span class="pill">Credit Risk</span>
-              <span class="pill">IFRS 9 / ECL</span>
-              <span class="pill">Basel IRB</span>
+              <span class="pill">Credit Risk Modelling</span>
+              <span class="pill">Scorecards &amp; Decisioning</span>
               <span class="pill">PD / LGD / EAD</span>
-              <span class="pill">Credit Policies</span>
-              <span class="pill">Limit Optimization</span>
-              <span class="pill">Credit &amp; Fraud Models</span>
+              <span class="pill">IFRS 9 / ECL</span>
+              <span class="pill">Early Warning Systems</span>
+              <span class="pill">Calibration &amp; Risk Grades</span>
               <span class="pill">Validation &amp; Backtesting</span>
-              <span class="pill">Monitoring &amp; Governance</span>
+              <span class="pill">Monitoring &amp; Model Drift</span>
+              <span class="pill">Credit Limits &amp; Cut-offs</span>
               <span class="pill">Portfolio Analytics</span>
               <span class="pill">Financial Econometrics</span>
-              <span class="pill">Stress Testing</span>
-              <span class="pill">Model Deployment</span>
+              <span class="pill">Machine Learning</span>
             </div>
           </div>
         </div>
@@ -632,63 +388,141 @@
 
     <section id="experience" class="section">
       <div class="card">
-        <h2>Selected Experience</h2>
+        <h2>Professional Experience</h2>
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Instructor, Machine Learning in Finance — National and Kapodistrian University of Athens, Greece</div>
-            <div class="role-date">Current</div>
+            <div class="role-title">Senior Risk Analyst &amp; Data Analytics Instructor — Creditinfo</div>
+            <div class="role-date">Jun 2022 – Jun 2025</div>
           </div>
           <div class="muted">
-            Teach applied machine learning for financial and risk applications, combining Python, data preparation, feature engineering, supervised learning, model evaluation, explainability, credit-risk use cases, and portfolio analytics.
+            Developed and supported end-to-end credit-risk models across international lending portfolios, including application, behavioural, collection, fraud and default-risk scorecards. Work covered data and target definition, feature engineering, WOE/IV and variable selection, logistic scorecards, calibration, score scaling, risk grades and cut-offs; AUC/Gini/KS, out-of-time validation, stability and drift monitoring; vintage/cohort, delinquency, cure and recovery analytics; early-warning indicators; ECL-related analysis; decision strategies; implementation/UAT; and methodology/governance documentation. Recipient of Creditinfo's Best Employee award in 2025.
           </div>
         </div>
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Senior Risk Analyst, Team Leader &amp; Lead Instructor — Creditinfo, Prague, Czechia</div>
+            <div class="role-title">Credit Risk Data Scientist — Optasia</div>
+            <div class="role-date">Aug 2021 – May 2022</div>
+          </div>
+          <div class="muted">
+            Developed and analysed credit-risk scorecards for digital-lending portfolios, with emphasis on micro- and macro-finance lending. Built early-warning indicators, supported segmentation and risk-driver analysis, and produced recurring default, recovery, delinquency and portfolio-performance analytics using Python, SQL and R.
+          </div>
+        </div>
+
+        <div class="role-item">
+          <div class="role-top">
+            <div class="role-title">Crypto &amp; Equity Analyst — Trainee, VisionFactory</div>
             <div class="role-date">2022 – 2025</div>
           </div>
           <div class="muted">
-            Led the development of advanced credit and fraud scorecards across multiple international markets, serving banks, fintechs, leasing and car-rental companies, mobile operators, and other financial and commercial institutions.
-            Built and validated scorecards for retail, SME, corporate, agricultural, fraud, and Buy Now Pay Later products, including corporate BNPL solutions, using Python, SQL, and R.
-            Responsibilities included IFRS 9 and Basel IRB model components covering PD, LGD, EAD, expected credit loss, staging and SICR, calibration, validation and backtesting, monitoring, model documentation and governance, stress testing, and portfolio decisioning.
-            Covered the end-to-end model lifecycle: data assessment, feature engineering, segmentation, estimation, implementation support, performance monitoring, and stakeholder communication.
-            Held senior and team leadership responsibilities, contributed to hiring and team development, and strengthened analytics capability inside the organization.
-            Chosen as lead instructor for a major bootcamp in Africa, training banking professionals to design, develop, validate, and monitor scorecards from scratch.
+            Conducted fundamental, technical and quantitative analysis of equities and cryptocurrencies, including valuation, volatility, market trends and price behaviour, and prepared investment research and analytical recommendations.
           </div>
         </div>
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Crypto &amp; Equity Analyst — VF Investment / VisionFactory, Barcelona, Spain</div>
-            <div class="role-date">2021 – 2025</div>
+            <div class="role-title">Financial Researcher — Trainee, KEPE</div>
+            <div class="role-date">Mar 2021 – Mar 2022</div>
           </div>
           <div class="muted">
-            Worked as a trainee on equity and crypto market analysis, valuation research, and portfolio-oriented financial insights, combining quantitative methods with investment-focused analytics.
+            Conducted macro-financial and economic research using quantitative and econometric methods, translating empirical results into reports, figures and policy-relevant conclusions.
           </div>
         </div>
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Credit Risk Data Scientist — Optasia, Athens, Greece</div>
-            <div class="role-date">2021 – 2022</div>
+            <div class="role-title">Researcher — Financial Mathematics &amp; Computation (FMC²)</div>
+            <div class="role-date">Sep 2018 – Aug 2022</div>
           </div>
           <div class="muted">
-            Designed and implemented credit-risk models, scorecards, risk segmentation, portfolio monitoring, and mitigation strategies for loan portfolios.
-            Developed credit policies and optimized credit-limit assignment to increase revenues while controlling exposure, approval rates, portfolio risk, and expected losses.
-            Performed cohort and vintage analysis, delinquency and default tracking, roll-rate and cure-rate analysis, and portfolio performance monitoring to refine credit policies, limits, and risk–revenue decisions.
+            Researched asset pricing, market efficiency, portfolio and risk management, and financial econometrics using MATLAB, Stata, Python and EViews with Bloomberg, Reuters, Datastream and market datasets.
           </div>
         </div>
 
         <div class="role-item">
           <div class="role-top">
-            <div class="role-title">Researcher, Research Fellow &amp; Teaching Assistant — Maynooth University &amp; FMC2, Ireland</div>
-            <div class="role-date">2018 – 2022</div>
+            <div class="role-title">Research Fellow &amp; Teaching Assistant — Maynooth University</div>
+            <div class="role-date">Sep 2018 – Aug 2022</div>
           </div>
           <div class="muted">
-            Conducted research in empirical finance, financial econometrics, security classification, asset pricing, portfolio and risk management, and later expanded strongly into AI and machine learning applications in finance and portfolio analytics.
+            Supported finance research and teaching while completing doctoral work in empirical finance and financial econometrics.
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="card">
+        <div class="scholar-header">
+          <h2>Peer-Reviewed Publications</h2>
+          <div class="scholar-badge">6 published · 2024–2026</div>
+        </div>
+        <p class="section-note">Journal rankings are shown compactly to provide context while keeping the publication record itself primary.</p>
+
+        <div class="pub-item">
+          <div class="pub-title">Do Daily Adaptive Machine Learning Stock Rankings Survive Trading Costs? Evidence from Cross-Sectional Technical Signals</div>
+          <div class="pub-meta"><strong>Economies</strong>, 14(9), 393, 2026</div>
+          <div class="pub-tags"><span class="pub-tag">ABS 1*</span><span class="pub-tag">ABDC C</span><span class="pub-tag">JCR Q2</span><span class="pub-tag">Scopus Q1</span><span class="pub-tag">SJR Q2</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.3390/economies14090393" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">European Green, Grey, Red Securities and Crisis Sentiment</div>
+          <div class="pub-meta"><strong>Review of Behavioral Economics</strong>, 13(1), 97–137, 2026</div>
+          <div class="pub-tags"><span class="pub-tag">ABS 2*</span><span class="pub-tag">ABDC B</span><span class="pub-tag">JIF 0.6</span><span class="pub-tag">SJR Q3</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.1108/RBE-03-2025-0223" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">A Hybrid Genetic Algorithm with Learning-to-Rank-to-Optimization for US Equity Portfolio Construction</div>
+          <div class="pub-meta"><strong>International Journal of Financial Studies</strong>, 14(4), 95, 2026</div>
+          <div class="pub-tags"><span class="pub-tag">ABDC B</span><span class="pub-tag">JCR Q2</span><span class="pub-tag">JIF 2.7</span><span class="pub-tag">Scopus Q2</span><span class="pub-tag">SJR Q2</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.3390/ijfs14040095" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Factor Structure of Green, Grey, and Red EU Securities</div>
+          <div class="pub-meta"><strong>Risks</strong>, 13(9), 176, 2025</div>
+          <div class="pub-tags"><span class="pub-tag">ABDC B</span><span class="pub-tag">JCR Q3</span><span class="pub-tag">JIF 1.8</span><span class="pub-tag">Scopus Q1</span><span class="pub-tag">SJR Q2</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.3390/risks13090176" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Empirical Asset Pricing Models for Green, Grey, and Red EU Securities: A Fama–French and Carhart Model Approach</div>
+          <div class="pub-meta"><strong>Journal of Risk and Financial Management</strong>, 18(5), 282, 2025</div>
+          <div class="pub-tags"><span class="pub-tag">ABDC B</span><span class="pub-tag">Scopus Q1</span><span class="pub-tag">SJR Q2</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.3390/jrfm18050282" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Performance of Green vis-à-vis Red EU Securities</div>
+          <div class="pub-meta"><strong>Investment Analysts Journal</strong>, 53(3), 2024</div>
+          <div class="pub-tags"><span class="pub-tag">ABS 1*</span><span class="pub-tag">ABDC B</span><span class="pub-tag">JCR Q2</span><span class="pub-tag">JIF 2.2</span><span class="pub-tag">Scopus Q2</span><span class="pub-tag">SJR Q3</span></div>
+          <div class="pub-links"><a href="https://doi.org/10.1080/10293523.2024.2408827" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> DOI</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Under Review</h2>
+          <ul class="list-clean">
+            <li>Does Crisis Index Sentiment Affect European Bank Equities? Evidence from Multi-Factor Models and Economic Regimes</li>
+            <li>Uncertainty versus Sentiment in European Bank Returns: Evidence Beyond Standard Risk Factors</li>
+            <li>Sparse Evolutionary Learning for Cross-Sectional U.S. Stock Ranking</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Selected Working Papers</h2>
+          <ul class="list-clean">
+            <li>Dynamic Credit Limit Assignment Using Machine Learning and Risk–Return Optimisation</li>
+            <li>Early Warning Systems for Credit Deterioration and IFRS 9 Stage Migration</li>
+            <li>Credit Scorecard Stability, Recalibration and Model Drift Across Economic Regimes</li>
+            <li>Integrated PD–LGD–EAD Modelling for IFRS 9 and IRB Using Interpretable Machine Learning</li>
+            <li>Bayesian Credit Risk Modelling</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -697,176 +531,14 @@
       <div class="card">
         <h2>Education</h2>
         <ul class="list-clean">
-          <li>
-            <a href="https://www.maynoothuniversity.ie/school-business" target="_blank" rel="noopener noreferrer"><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Maynooth University, Ireland
-          </li>
-          <li>
-            <a href="https://www.technoeconomics.epu.ntua.gr/" target="_blank" rel="noopener noreferrer"><strong>MSc in Techno-Economic Systems</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — National Technical University of Athens, Greece — <strong>Ongoing</strong>
-          </li>
-          <li>
-            <a href="https://msc.iee.ihu.gr/en/" target="_blank" rel="noopener noreferrer"><strong>MSc in Web Intelligence</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — International Hellenic University, Greece — <strong>Ongoing</strong>
-          </li>
-          <li>
-            <a href="https://pms.civil.duth.gr/en/am_en/" target="_blank" rel="noopener noreferrer"><strong>MSc in Applied Mathematics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Democritus University of Thrace, Greece
-          </li>
-          <li>
-            <a href="https://dws.csd.auth.gr/en/home-eng/" target="_blank" rel="noopener noreferrer"><strong>MSc in Data and Web Science</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Aristotle University of Thessaloniki, Greece
-          </li>
-          <li>
-            <a href="https://www.uom.gr/en/mbads" target="_blank" rel="noopener noreferrer"><strong>MSc in Business Analytics &amp; Data Science</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — University of Macedonia, Greece
-          </li>
-          <li>
-            <a href="https://mphil-en.econ.uoa.gr/" target="_blank" rel="noopener noreferrer"><strong>MPhil in Economics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — National and Kapodistrian University of Athens, Greece
-          </li>
-          <li>
-            <a href="https://www.dept.aueb.gr/en/master.accfin" target="_blank" rel="noopener noreferrer"><strong>MSc in Accounting &amp; Finance, Major in Finance</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — Athens University of Economics and Business, Greece
-          </li>
-          <li>
-            <a href="https://en.math.uoa.gr/" target="_blank" rel="noopener noreferrer"><strong>BSc in Applied Mathematics, Majors in Statistics &amp; Operations Research and Computational Mathematics</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            — National and Kapodistrian University of Athens, Greece
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="publications" class="section">
-      <div class="card">
-        <div class="scholar-header">
-          <h2>Publications</h2>
-          <div class="scholar-badge">5 published</div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">Performance of Green vis-à-vis Red EU Securities</div>
-          <div class="pub-meta">Investment Analysts Journal, 53(3), 2024</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.1080/10293523.2024.2408827" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">Empirical Asset Pricing Models for Green, Grey, and Red EU Securities: A Fama-French and Carhart Model Approach</div>
-          <div class="pub-meta">Journal of Risk and Financial Management, 18(5), 2025</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.3390/jrfm18050282" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">Factor Structure of Green, Grey, and Red EU Securities</div>
-          <div class="pub-meta">Risks, 13(9), 2025</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.3390/risks13090176" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">A Hybrid Genetic Algorithm with Learning-to-Rank-to-Optimization for US Equity Portfolio Construction</div>
-          <div class="pub-meta">International Journal of Financial Studies, 14(4), 2026</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.3390/ijfs14040095" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">European Green, Grey, Red Securities and Crisis Sentiment</div>
-          <div class="pub-meta">Review of Behavioral Economics, 13(1), 2026</div>
-          <div class="pub-links">
-            <a href="https://doi.org/10.1108/RBE-03-2025-0223" target="_blank"><i class="fa-solid fa-link"></i> DOI</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="working-papers" class="section">
-      <div class="card">
-        <h2>Working Projects</h2>
-
-        <div class="pub-item">
-          <div class="pub-title">Bayesian Credit Risk Modelling</div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">European Bank Equities and Crisis Sentiment</div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">Approach of Genetic Algorithm to Reinforcement Learning using Learning-to-Rank for US Equity Portfolio Management</div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-title">Digital Currencies and Policies</div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="grid-2">
-        <div class="card">
-          <h2>AI, ML &amp; Portfolio Management</h2>
-          <ul class="list-clean">
-            <li>Developed AI and machine learning frameworks for stock selection, ranking, and wealth allocation.</li>
-            <li>Applied reinforcement learning and learning-to-rank approaches to portfolio management and investment decision-making.</li>
-            <li>Built research-driven asset pricing and market analysis models across securities with different environmental classifications.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Risk, Credit &amp; Fraud Modeling</h2>
-          <ul class="list-clean">
-            <li>Designed and validated credit and fraud scorecards across international banking, fintech, leasing, mobility, telecom, and broader commercial markets.</li>
-            <li>Built models for corporate BNPL, SME, retail, microfinance, agricultural, fraud, and other risk-sensitive products.</li>
-            <li>Worked across the model lifecycle: data and feature design, segmentation, estimation, calibration, validation and backtesting, documentation, implementation support, monitoring, and model governance.</li>
-            <li>Developing practical IFRS 9 and Basel IRB frameworks in Python covering PD, LGD, EAD, expected credit loss, staging, lifetime risk, cure and migration analysis, risk grades, stress testing, and portfolio monitoring.</li>
-            <li>Designed credit policies and optimized credit-limit assignment to increase revenues while managing approval rates, exposure, expected losses, and portfolio risk.</li>
-            <li>Led model training, analytics instruction, and scorecard development bootcamps for banking professionals in Africa.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications" class="section">
-      <div class="grid-2">
-        <div class="card">
-          <h2>Professional Certifications</h2>
-          <ul class="list-clean">
-            <li>IBM Data Science Professional Certificate</li>
-            <li>Professional Data Analyst Certificate (DataCamp)</li>
-            <li>Azure Data Scientist Associate</li>
-            <li>Blockchain Developer</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Professional Qualifications</h2>
-          <ul class="list-clean">
-            <li>FRM® Level I Candidate</li>
-            <li>ACCA — Certified with F1–F4 papers</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="courses" class="section">
-      <div class="card">
-        <h2>University Teaching &amp; Professional Instruction</h2>
-        <ul class="list-clean">
-          <li><strong>Machine Learning in Finance</strong> — National and Kapodistrian University of Athens</li>
-          <li>AI and Portfolio Management</li>
-          <li>Credit Risk Analytics: Scorecards, PD/LGD/EAD, IFRS 9 and Basel IRB</li>
-          <li>Mathematics in Data Science</li>
-          <li>Blockchain Architecture and Programming in Solidity</li>
-          <li>Database Management in Finance</li>
-          <li>AI in Risk Modeling and Management</li>
+          <li><strong>PhD in Empirical Finance &amp; Financial Econometrics</strong> — Maynooth University, Ireland, 2018–2024</li>
+          <li><strong>MBA in Techno-Economic Systems — Technology Management</strong> — National Technical University of Athens, Greece, 2026–2028 (ongoing)</li>
+          <li><strong>MSc in Applied Mathematics — Distinction</strong> — Democritus University of Thrace, Greece, 2025–2026</li>
+          <li><strong>MSc in Data &amp; Web Science — Distinction</strong> — Aristotle University of Thessaloniki, Greece</li>
+          <li><strong>MSc in Business Analytics &amp; Data Science — Distinction</strong> — University of Macedonia, Greece</li>
+          <li><strong>MPhil in Economics — Quantitative Methods &amp; Economics</strong> — National &amp; Kapodistrian University of Athens, Greece</li>
+          <li><strong>MSc in Accounting &amp; Finance — Distinction</strong> — Athens University of Economics &amp; Business, Greece</li>
+          <li><strong>BSc (Hons) in Applied Mathematics</strong> — National &amp; Kapodistrian University of Athens, Greece</li>
         </ul>
       </div>
     </section>
@@ -874,87 +546,86 @@
     <section id="skills" class="section">
       <div class="grid-2">
         <div class="card">
-          <h2>Technical Skills</h2>
+          <h2>Primary Technical Stack</h2>
           <div class="pill-row">
             <span class="pill">Python</span>
-            <span class="pill">R</span>
             <span class="pill">SQL</span>
+            <span class="pill">R</span>
             <span class="pill">scikit-learn</span>
             <span class="pill">XGBoost</span>
             <span class="pill">SHAP / Explainable AI</span>
-            <span class="pill">Git &amp; GitHub</span>
             <span class="pill">MATLAB</span>
-            <span class="pill">Fortran</span>
-            <span class="pill">Mathematica</span>
-            <span class="pill">Stata</span>
-            <span class="pill">EViews</span>
-            <span class="pill">JMP</span>
-            <span class="pill">Alteryx</span>
-            <span class="pill">Tableau</span>
-            <span class="pill">Power BI</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Neo4j</span>
-            <span class="pill">SPARQL</span>
+            <span class="pill">Stata / EViews</span>
+            <span class="pill">Azure</span>
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">Power BI / Tableau</span>
           </div>
+          <p class="section-note" style="margin-top:14px;">Additional exposure includes MongoDB, Neo4j, SPARQL/Virtuoso, Hadoop/Spark, Fortran, Mathematica, SAS, JMP, Alteryx, Java and Scala.</p>
         </div>
 
         <div class="card">
-          <h2>Domain Expertise</h2>
+          <h2>Quantitative &amp; Risk Methods</h2>
           <div class="pill-row">
-            <span class="pill">IFRS 9 / ECL</span>
-            <span class="pill">Basel IRB</span>
-            <span class="pill">PD / LGD / EAD</span>
-            <span class="pill">Credit Policies</span>
-            <span class="pill">Credit Limits</span>
-            <span class="pill">Risk–Revenue</span>
-            <span class="pill">Credit Models</span>
-            <span class="pill">Scorecards</span>
+            <span class="pill">Logistic Scorecards</span>
+            <span class="pill">WOE / IV</span>
+            <span class="pill">AUC / Gini / KS</span>
+            <span class="pill">OOT Validation</span>
             <span class="pill">Calibration</span>
-            <span class="pill">Validation</span>
-            <span class="pill">Backtesting</span>
-            <span class="pill">Monitoring &amp; Drift</span>
-            <span class="pill">Stress Testing</span>
-            <span class="pill">Risk Grades</span>
-            <span class="pill">Migration Analysis</span>
-            <span class="pill">Portfolio Analytics</span>
-            <span class="pill">Model Governance</span>
-            <span class="pill">Econometrics</span>
-            <span class="pill">Risk Management</span>
-            <span class="pill">Portfolio Management</span>
-            <span class="pill">Reinforcement Learning</span>
-            <span class="pill">Valuation</span>
+            <span class="pill">Vintage / Cohort Analysis</span>
+            <span class="pill">Cure / Recovery Analysis</span>
+            <span class="pill">Stress &amp; Scenario Analysis</span>
+            <span class="pill">Time Series</span>
             <span class="pill">Asset Pricing</span>
-            <span class="pill">Forecasting</span>
-            <span class="pill">Algorithmic Trading</span>
+            <span class="pill">Portfolio Optimisation</span>
+            <span class="pill">VaR / Expected Shortfall</span>
+            <span class="pill">GARCH / CAViaR</span>
+            <span class="pill">Reinforcement Learning</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Professional Qualifications</h2>
+          <ul class="list-clean">
+            <li>Global Association of Risk Professionals (GARP) — FRM® Level I candidate</li>
+            <li>Association of Chartered Certified Accountants (ACCA) — F1–F4 papers completed</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Selected Certifications</h2>
+          <ul class="list-clean">
+            <li>Azure Data Scientist Associate — Microsoft</li>
+            <li>IBM Data Science Professional Certificate</li>
+            <li>Professional Data Analyst Certificate — DataCamp</li>
+            <li>Blockchain Developer — University of Nicosia</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
       <div class="card">
-        <h2>Contact</h2>
+        <h2>Contact &amp; Research Profiles</h2>
         <div class="icon-links">
-          <a href="mailto:ferdinantosk@math.uoa.gr"><i class="fa-solid fa-envelope"></i> ferdinantosk@math.uoa.gr</a>
+          <a href="mailto:ferdinantosk@math.uoa.gr"><i class="fa-solid fa-envelope"></i> Email</a>
           <a href="tel:+353831012005"><i class="fa-solid fa-phone"></i> +353831012005</a>
-          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="https://github.com/fkottas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-          <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+          <a href="https://www.linkedin.com/in/ferdinantos-kottas/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/fkottas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.gr/citations?user=mvS0meoAAAAJ&hl=el" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+          <a href="https://orcid.org/0009-0003-5879-3461" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a href="https://www.researchgate.net/profile/Ferdinantos-Kottas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
         </div>
       </div>
     </section>
-
   </div>
 
   <script>
     function openTab(event, tabId) {
-      const sections = document.querySelectorAll('.section');
-      const tabs = document.querySelectorAll('.tab');
-
-      sections.forEach(section => section.classList.remove('active'));
-      tabs.forEach(tab => tab.classList.remove('active'));
-
+      document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       event.currentTarget.classList.add('active');
     }
